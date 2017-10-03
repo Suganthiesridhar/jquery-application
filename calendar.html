@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+ </script>
+
+ <script>
+  $(document).ready(function(){
+    $(".days li").mouseenter(function(){
+        $(this).css("background-color", "lightgray");
+    });
+});
+  $(document).ready(function(){
+    $(".days li").mouseleave(function(){
+        $(this).css("background-color", "black");
+    });
+});
+  $(document).ready(function(){
+    $(".diwali").hover(function(){
+        alert("Happy Diwali!");
+    });
+  });
+   $(document).ready(function(){
+    $(".gandhi").hover(function(){
+        alert("Gandhi Jayanthi!");
+    });
+  });
+   $(document).ready(function(){
+    $("button").click(function(){
+        $(".tue").fadeToggle();
+        $(".tue").fadeToggle("slow");
+        $(".tue").fadeToggle(3000);
+    });
+});
+  
+$(document).ready(function(){
+    $(".days li").click(function(){
+        alert("No events!");
+    });
+});
+
+ </script>
+  <title>Calendar</title>
+  <style type="text/css">
+    
+    ul {
+      list-style-type: none;
+    }
+
+body {
+  font-family: Verdana, sans-serif;
+}
+
+/* Month header */
+.month {
+    padding: 70px 25px;
+    width: 100%;
+    background: #bc1ab6;
+    text-align: center;
+}
+
+/* Month list */
+.month ul {
+    margin: 0;
+    padding: 0;
+}
+
+.month ul li {
+    color: #000FF;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+/* Previous button inside month header */
+.month .prev {
+    float: left;
+    padding-top: 10px;
+}
+
+/* Next button */
+.month .next {
+    float: right;
+    padding-top: 10px;
+}
+
+/* Weekdays (Mon-Sun) */
+.weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color:black;
+    font-weight: bold;
+}
+
+.weekdays li {
+    display: inline-block;
+    width: 13.6%;
+    color: #666; /* gray */
+    text-align: center;
+}
+
+/* Days (1-31) */
+.days {
+    padding: 10px 0;
+    background: white;
+    margin: 0;
+}
+
+.days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size:12px;
+    color: white;
+    font-weight: bold;
+}
+
+/* Highlight the "current" day */
+.days {
+    padding: 5px;
+    background: black;
+    color: black !important
+}
+
+.days li .today {
+    padding: 5px;
+    background: #1abc9c;
+    color: white !important
+}
+.days li .diwali  {
+    padding: 5px;
+    background: orange;
+    color: white !important
+}
+.days li .gandhi {
+    padding: 5px;
+    background: orange;
+    color: white !important
+}
+
+
+
+
+  </style>
+</head>
+<body>
+
+<div class="month"> 
+  <ul>
+    <li class="prev">&#10094;</li>
+    <li class="next">&#10095;</li>
+    <li>
+      October<br>
+      <span style="font-size:20px">2017</span>
+    </li>
+  </ul>
+</div>
+
+<ul class="weekdays">
+  <li>Monday</li>
+  <li>Tuesday</li>
+  <li>Wednesday</li>
+  <li>Thusday</li>
+  <li>Friday</li>
+  <li>Saturday</li>
+  <li>Sunday</li>
+</ul>
+
+<ul class="days"> 
+  <li>25</li>
+  <li>26</li>
+  <li>27</li>
+  <li>28</li>
+  <li>29</li>
+  <li>30</li>
+  <li>01</li>
+  <li><span class="gandhi">02</span></li>
+  <li><span class="tue" style="padding: 5px;display: none; background: yellow; color: white !important">03</span></li>
+  <li><span class="today">04</span></li>
+  <li>05</li>
+  <li>06</li>
+  <li>07</li>
+  <li>08</li>
+  <li>09</li>
+  <li><span class="tue" style="padding: 5px;display: none; background: yellow; color: white !important">10</span></li>
+  <li>11</li>
+  <li>12</li>
+  <li>13</li>
+  <li>14</li>
+  <li>15</li>
+  <li>16</li>
+  <li><span class="tue" style="padding: 5px;display: none; background: yellow; color: white !important">17</span></li>
+  <li><span class="diwali">18</span></li>
+  <li>19</li>
+  <li>20</li>
+  <li>21</li>
+  <li>22</li>
+  <li>23</li>
+  <li><span class="tue" style="padding: 5px;display: none; background: yellow; color: white !important">24</span></li>
+  <li>25</li>
+  <li>26</li>
+  <li>27</li>
+  <li>28</li>
+  <li>29</li>
+  <li>30</li>
+  <li><span class="tue" style="padding: 5px;display: none; background: yellow; color: white !important">31</span></li>
+  
+</ul>
+
+<button>Book meet days of the month</button><br><br>
+</body>
+</html>
+
